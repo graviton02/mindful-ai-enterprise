@@ -1,14 +1,6 @@
 import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { CHALLENGES } from '../constants';
-import { StatData } from '../types';
-import { BrainCircuit, Activity, Zap } from 'lucide-react';
-
-// Updated colors for better contrast on green background
-const data: StatData[] = [
-  { name: 'Initiatives Stalled/Failed', value: 80, fill: '#FF5252' }, // Bright Red/Coral
-  { name: 'Successful Production', value: 20, fill: '#FFFFFF' }, // White
-];
+import { BrainCircuit, Activity, Zap, AlertTriangle, TrendingDown } from 'lucide-react';
 
 const RealityCheck: React.FC = () => {
   return (
@@ -27,45 +19,49 @@ const RealityCheck: React.FC = () => {
         {/* Top Section: Split View */}
         <div className="flex flex-col lg:flex-row gap-16 mb-24">
           
-          {/* Left Column: Text & Pie Chart */}
-          <div className="lg:w-1/2 space-y-8">
+          {/* Left Column: Stats & Message */}
+          <div className="lg:w-1/2 space-y-6">
              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 shadow-lg">
-                <p className="leading-relaxed opacity-90 mb-4 text-lg">
-                  Despite unprecedented momentum, nearly <span className="font-bold text-white">80%</span> of GenAI and Agentic AI initiatives never reach full-scale production.
-                </p>
-                <p className="leading-relaxed opacity-90 font-semibold mb-6">
-                  The limitation is not the technology—it is the enterprise operating model.
-                </p>
-                <div className="h-64 w-full">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={data}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={60}
-                        outerRadius={80}
-                        paddingAngle={5}
-                        dataKey="value"
-                        stroke="none"
-                      >
-                        {data.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.fill} />
-                        ))}
-                      </Pie>
-                      <Tooltip 
-                        contentStyle={{ backgroundColor: '#fff', borderRadius: '8px', border: 'none', color: '#333', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
-                        itemStyle={{ color: '#333', fontWeight: 600 }}
-                      />
-                      <Legend 
-                        verticalAlign="middle" 
-                        align="right" 
-                        layout="vertical" 
-                        iconType="circle"
-                        formatter={(value) => <span className="text-white font-medium ml-2">{value}</span>}
-                      />
-                    </PieChart>
-                  </ResponsiveContainer>
+                {/* Large Stat Display */}
+                <div className="flex items-center gap-6 mb-6">
+                  <div className="flex-shrink-0">
+                    <div className="text-7xl md:text-8xl font-black text-brand-yellow leading-none">80%</div>
+                    <div className="text-sm font-semibold text-brand-yellow/80 uppercase tracking-wider mt-1">Initiatives Stalled</div>
+                  </div>
+                  <div className="h-20 w-px bg-white/30"></div>
+                  <div className="flex-1">
+                    <p className="text-lg leading-relaxed opacity-90">
+                      of GenAI and Agentic AI initiatives <span className="font-bold text-white">never reach</span> full-scale production.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border-t border-white/20 pt-6">
+                  <p className="leading-relaxed opacity-90 font-semibold text-lg">
+                    The limitation is not the technology—it is the enterprise operating model.
+                  </p>
+                </div>
+             </div>
+
+             {/* Additional Stats Row */}
+             <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 flex items-center gap-4">
+                  <div className="p-3 bg-red-500/20 rounded-lg">
+                    <AlertTriangle className="text-red-300" size={24} />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">87%</div>
+                    <div className="text-xs opacity-70">Fail to scale beyond pilots</div>
+                  </div>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm p-5 rounded-xl border border-white/20 flex items-center gap-4">
+                  <div className="p-3 bg-amber-500/20 rounded-lg">
+                    <TrendingDown className="text-amber-300" size={24} />
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold">$2.5T</div>
+                    <div className="text-xs opacity-70">Potential value at risk</div>
+                  </div>
                 </div>
              </div>
           </div>
