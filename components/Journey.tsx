@@ -1,13 +1,12 @@
 import React from 'react';
 import { JOURNEY_STEPS } from '../constants';
-import { ShieldCheck } from 'lucide-react';
 
 const Journey: React.FC = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our 5-Step Mindful AI Enablement Journey</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our 6-Step Mindful AI Enablement Journey</h2>
           <p className="text-gray-600">
             Every successful AI transformation follows a disciplined, enterprise-ready journey—grounded in governance, safety, engineering precision, and measurable business value. Mindful AI structures this journey end to end.
           </p>
@@ -42,23 +41,6 @@ const Journey: React.FC = () => {
             })}
           </div>
 
-          {/* Continuous Optimization Bar */}
-          <div className="mt-20 bg-brand-dark text-white p-8 rounded-lg shadow-xl relative overflow-hidden border-t-4 border-brand-green">
-            <div className="absolute top-0 right-0 p-4 opacity-5">
-              <ShieldCheck size={120} />
-            </div>
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
-              <div className="p-4 bg-brand-green rounded-full flex-shrink-0">
-                <ShieldCheck size={32} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Continuous Optimization & Governance</h3>
-                <p className="text-gray-400">
-                  Continuous optimization and governance operate across all five stages—ensuring drift detection, performance monitoring, cost governance, security oversight, and trustworthy AI behavior throughout the lifecycle.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

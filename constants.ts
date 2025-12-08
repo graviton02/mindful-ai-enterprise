@@ -85,6 +85,12 @@ export const JOURNEY_STEPS: JourneyStep[] = [
     title: "Enterprise Adoption & Value Realization",
     subtitle: "AI value is only realized when it is adopted at scale.",
     description: "We enable KPI-driven performance dashboards, structured change management programs, AI governance councils, and adoption telemetry to ensure sustained enterprise impact."
+  },
+  {
+    id: 6,
+    title: "Continuous Optimization & Governance",
+    subtitle: "Ensuring trustworthy AI behavior throughout the lifecycle.",
+    description: "Continuous optimization and governance operate across all five stages—ensuring drift detection, performance monitoring, cost governance, security oversight, and trustworthy AI behavior throughout the lifecycle."
   }
 ];
 

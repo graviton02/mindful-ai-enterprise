@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import RealityCheck from './components/RealityCheck';
 import VisionCloud from './components/VisionCloud';
 import Journey from './components/Journey';
+import EnterpriseOutcomes from './components/EnterpriseOutcomes';
 import Offerings from './components/Offerings';
 import Placeholders from './components/Placeholders';
 import Footer from './components/Footer';
@@ -17,6 +18,7 @@ function App() {
         <RealityCheck />
         <VisionCloud />
         <Journey />
+        <EnterpriseOutcomes />
         <Offerings />
         <Placeholders />
       </main>
