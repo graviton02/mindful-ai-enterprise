@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import RealityCheck from './components/RealityCheck';
 import VisionCloud from './components/VisionCloud';
 import MindfulOperations from './components/MindfulOperations';
-import ApproachSection from './components/ApproachSection';
 import Journey from './components/Journey';
 import SecureOutcome from './components/SecureOutcome';
 import EnterpriseOutcomes from './components/EnterpriseOutcomes';
@@ -23,7 +22,6 @@ function App() {
         <RealityCheck />
         <VisionCloud />
         <MindfulOperations />
-        <ApproachSection />
         <Journey />
         <SecureOutcome />
         <EnterpriseOutcomes />
