@@ -3,7 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RealityCheck from './components/RealityCheck';
 import VisionCloud from './components/VisionCloud';
+import MindfulOperations from './components/MindfulOperations';
+import ApproachSection from './components/ApproachSection';
 import Journey from './components/Journey';
+import SecureOutcome from './components/SecureOutcome';
 import EnterpriseOutcomes from './components/EnterpriseOutcomes';
 import Offerings from './components/Offerings';
 import Placeholders from './components/Placeholders';
@@ -17,7 +20,10 @@ function App() {
         <Hero />
         <RealityCheck />
         <VisionCloud />
+        <MindfulOperations />
+        <ApproachSection />
         <Journey />
+        <SecureOutcome />
         <EnterpriseOutcomes />
         <Offerings />
         <Placeholders />
