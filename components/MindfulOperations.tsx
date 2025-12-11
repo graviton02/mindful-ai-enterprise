@@ -47,7 +47,7 @@ const MindfulOperations: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
           {/* Column 1: The Challenge */}
-          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
             <div className="bg-gradient-to-r from-brand-green to-brand-darkGreen p-4 text-center relative">
               <div className="absolute top-3 right-3">
@@ -58,7 +58,7 @@ const MindfulOperations: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6 flex-1 flex flex-col">
               <div className="flex gap-4 mb-6">
                 {/* Gray bars representing data silos */}
                 <div className="flex items-end gap-1">
@@ -90,7 +90,7 @@ const MindfulOperations: React.FC = () => {
               </div>
 
               {/* Bullet points */}
-              <ul className="text-sm text-gray-700 space-y-1">
+              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-400">•</span>
                   <span>Disconnected systems & data sources.</span>
@@ -108,7 +108,7 @@ const MindfulOperations: React.FC = () => {
           </div>
 
           {/* Column 2: The Solution */}
-          <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
             <div className="bg-gradient-to-r from-teal-400 to-teal-500 p-4 text-center relative">
               <div className="absolute top-3 right-3">
@@ -119,7 +119,7 @@ const MindfulOperations: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6 flex-1 flex flex-col">
               {/* Grid of solution items */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {solutionItems.map((item, index) => (
@@ -138,7 +138,7 @@ const MindfulOperations: React.FC = () => {
               </div>
 
               {/* Bullet points */}
-              <ul className="text-sm text-gray-700 space-y-1">
+              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-400">•</span>
                   <span>Integrates all data & functions.</span>
@@ -156,7 +156,7 @@ const MindfulOperations: React.FC = () => {
           </div>
 
           {/* Column 3: The Outcome */}
-          <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm">
+          <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
             <div className="bg-gradient-to-r from-brand-green to-teal-500 p-4 text-center relative">
               <div className="absolute top-3 right-3">
@@ -167,7 +167,7 @@ const MindfulOperations: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="p-6 flex-1 flex flex-col">
               {/* Circular diagram */}
               <div className="relative w-full h-48 mb-6">
                 {/* Center circle */}
@@ -222,7 +222,7 @@ const MindfulOperations: React.FC = () => {
               </div>
 
               {/* Key definitions */}
-              <ul className="text-sm text-gray-700 space-y-1">
+              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-400">•</span>
                   <span><strong className="text-gray-900">Mindful:</strong> Ethical, trusted, high-quality data.</span>
