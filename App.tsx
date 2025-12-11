@@ -9,6 +9,8 @@ import Journey from './components/Journey';
 import SecureOutcome from './components/SecureOutcome';
 import EnterpriseOutcomes from './components/EnterpriseOutcomes';
 import Offerings from './components/Offerings';
+import WhyHappiestMinds from './components/WhyHappiestMinds';
+import PathForward from './components/PathForward';
 import Placeholders from './components/Placeholders';
 import Footer from './components/Footer';
 
@@ -26,6 +28,8 @@ function App() {
         <SecureOutcome />
         <EnterpriseOutcomes />
         <Offerings />
+        <WhyHappiestMinds />
+        <PathForward />
         <Placeholders />
       </main>
       <Footer />
