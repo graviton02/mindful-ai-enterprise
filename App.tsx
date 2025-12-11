@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import RealityCheck from './components/RealityCheck';
 import VisionCloud from './components/VisionCloud';
 import MindfulOperations from './components/MindfulOperations';
 import Journey from './components/Journey';
@@ -19,7 +18,6 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <RealityCheck />
         <VisionCloud />
         <MindfulOperations />
         <Journey />

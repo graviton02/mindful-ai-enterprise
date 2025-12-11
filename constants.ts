@@ -12,7 +12,7 @@ import {
 import { Challenge, JourneyStep, Offering, VisionPoint } from './types';
 
 export const HERO_TITLE = "Mindful AI. Built to Scale. Engineered for Outcomes.";
-export const HERO_SUBTITLE = "Most enterprises struggle to translate AI ambition into sustained business value. Scaling AI safely, reliably, and cost-effectively remains a persistent challenge.";
+export const HERO_SUBTITLE = "";
 
 export const CHALLENGES: Challenge[] = [
   {
