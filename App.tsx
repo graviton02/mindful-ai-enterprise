@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import VisionCloud from './components/VisionCloud';
 import MindfulOperations from './components/MindfulOperations';
 import Journey from './components/Journey';
-import SecureOutcome from './components/SecureOutcome';
 import EnterpriseOutcomes from './components/EnterpriseOutcomes';
 import Offerings from './components/Offerings';
 import WhyHappiestMinds from './components/WhyHappiestMinds';
@@ -21,7 +20,6 @@ function App() {
         <VisionCloud />
         <MindfulOperations />
         <Journey />
-        <SecureOutcome />
         <EnterpriseOutcomes />
         <Offerings />
         <WhyHappiestMinds />
