@@ -17,6 +17,7 @@ export interface JourneyStep {
   title: string;
   subtitle: string;
   description: string;
+  icon: LucideIcon;
 }
 
 export interface Offering {

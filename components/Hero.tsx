@@ -31,33 +31,12 @@ const Hero: React.FC = () => {
 
           {/* Illustration/Graphic */}
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-lg aspect-square">
-               {/* Abstract Tech Illustration placeholder - mimicking the "cloud/devices" graphic */}
-               <svg viewBox="0 0 400 400" className="w-full h-full filter drop-shadow-xl">
-                  {/* Central Cloud Node */}
-                  <circle cx="200" cy="200" r="60" fill="white" stroke="#43A047" strokeWidth="2" />
-                  <path d="M185,200 Q190,185 200,185 T215,200 T230,210 L170,210 Z" fill="#43A047" />
-                  
-                  {/* Orbiting Nodes */}
-                  <g className="animate-spin-slow" style={{ transformOrigin: '200px 200px' }}>
-                     <circle cx="200" cy="80" r="30" fill="#2E7D32" opacity="0.9" />
-                     <path d="M200,140 L200,110" stroke="#43A047" strokeWidth="2" strokeDasharray="4 4" />
-                     
-                     <circle cx="320" cy="200" r="30" fill="#1565C0" opacity="0.9" />
-                     <path d="M260,200 L290,200" stroke="#43A047" strokeWidth="2" strokeDasharray="4 4" />
-
-                     <circle cx="200" cy="320" r="30" fill="#FFD600" opacity="0.9" />
-                     <path d="M200,260 L200,290" stroke="#43A047" strokeWidth="2" strokeDasharray="4 4" />
-
-                     <circle cx="80" cy="200" r="30" fill="#0288D1" opacity="0.9" />
-                     <path d="M140,200 L110,200" stroke="#43A047" strokeWidth="2" strokeDasharray="4 4" />
-                  </g>
-                  
-                  {/* Connecting Arc */}
-                  <path d="M80,200 A120,120 0 0,1 320,200" fill="none" stroke="#E0F7FA" strokeWidth="20" strokeLinecap="round" opacity="0.5" />
-                  <path d="M80,200 A120,120 0 0,0 320,200" fill="none" stroke="#E0F7FA" strokeWidth="20" strokeLinecap="round" opacity="0.5" />
-
-               </svg>
+            <div className="relative w-full max-w-lg">
+              <img
+                src="/hero-ai.jpg"
+                alt="AI robot hand with chip"
+                className="w-full h-auto filter drop-shadow-xl"
+              />
             </div>
           </div>
 

@@ -11,28 +11,25 @@ import {
   Shield,
   Eye,
   TrendingUp,
-  Lightbulb
+  Lightbulb,
+  BarChart3,
+  Bot,
+  Layers,
+  Globe,
+  Sparkles,
+  Server
 } from 'lucide-react';
 
 const MindfulOperations: React.FC = () => {
   const solutionItems = [
     { icon: Cloud, label: 'Cloud-Native AI' },
-    { icon: Brain, label: 'Foundation Models' },
-    { icon: Cpu, label: 'Custom AI Models' },
-    { icon: Network, label: 'Agentic AI' },
-    { icon: Settings, label: 'Cognitive APIs' },
-    { icon: Workflow, label: 'Edge AI' },
-    { icon: Lightbulb, label: 'Generative AI' },
-    { icon: Database, label: 'AI Platforms' },
-  ];
-
-  const outcomeItems = [
-    { icon: Workflow, label: 'AI-Orchestrated Workflows', position: 'top-left' },
-    { icon: Shield, label: 'Policy-Driven Autonomy', position: 'top-right' },
-    { icon: Users, label: 'Multi-Agent Collaboration', position: 'left' },
-    { icon: Users, label: 'Human-Looped Governance', position: 'right' },
-    { icon: Eye, label: 'Real Time Clarity and Insight', position: 'bottom-left' },
-    { icon: TrendingUp, label: 'Continuous Improvement', position: 'bottom-right' },
+    { icon: Layers, label: 'Foundation Models' },
+    { icon: Settings, label: 'Custom AI Models' },
+    { icon: Bot, label: 'Agentic AI' },
+    { icon: Cpu, label: 'Cognitive APIs' },
+    { icon: Server, label: 'Edge AI' },
+    { icon: Sparkles, label: 'Generative AI' },
+    { icon: Globe, label: 'AI Platforms' },
   ];
 
   return (
@@ -44,63 +41,72 @@ const MindfulOperations: React.FC = () => {
         </div>
 
         {/* Three Columns */}
-        <div className="grid lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
 
           {/* Column 1: The Challenge */}
           <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
-            <div className="bg-gradient-to-r from-brand-green to-brand-darkGreen p-4 text-center relative">
-              <div className="absolute top-3 right-3">
-                <Settings className="w-6 h-6 text-white/70" />
+            <div className="bg-gradient-to-r from-brand-green to-brand-darkGreen p-5 text-center relative">
+              <div className="flex justify-center mb-2">
+                <BarChart3 className="w-8 h-8 text-white/80" />
               </div>
-              <h3 className="text-white font-bold text-lg">The Challenge: Fragmented</h3>
-              <p className="text-white font-bold text-lg">Data and Silos</p>
+              <h3 className="text-white font-bold text-lg leading-tight">
+                The Challenge: Fragmented<br/>Data and Silos
+              </h3>
             </div>
 
             {/* Content */}
-            <div className="p-6 flex-1 flex flex-col">
-              <div className="flex gap-4 mb-6">
-                {/* Gray bars representing data silos */}
-                <div className="flex items-end gap-1">
-                  <div className="w-8 h-32 bg-gray-300 rounded-t-sm relative">
-                    <span className="absolute -left-1 top-1/2 -translate-y-1/2 -rotate-90 text-[8px] text-gray-600 whitespace-nowrap origin-center">Enterprise Knowledge Sources</span>
-                  </div>
-                  <div className="w-8 h-28 bg-gray-400 rounded-t-sm relative">
-                    <span className="absolute -left-1 top-1/2 -translate-y-1/2 -rotate-90 text-[8px] text-gray-600 whitespace-nowrap origin-center">Operational Data Sources</span>
-                  </div>
-                  <div className="w-8 h-36 bg-gray-300 rounded-t-sm relative">
-                    <span className="absolute -left-1 top-1/2 -translate-y-1/2 -rotate-90 text-[8px] text-gray-600 whitespace-nowrap origin-center">Specialized Data Repositories</span>
-                  </div>
+            <div className="p-5 flex-1 flex flex-col justify-center">
+              {/* Gray bars with labels inside - top section */}
+              <div className="flex gap-2 mb-3">
+                <div className="flex-1 h-24 bg-gray-300 rounded-lg flex items-center justify-center p-3">
+                  <span className="text-xs text-gray-700 font-semibold text-center leading-tight">Enterprise Knowledge Sources</span>
                 </div>
-
-                {/* System boxes */}
-                <div className="flex flex-col gap-2 flex-1">
-                  {['ERP', 'ITSM', 'HRIS / HCM', 'CRM'].map((system) => (
-                    <div key={system} className="bg-brand-green text-white text-center py-2 px-4 rounded font-semibold text-sm">
-                      {system}
-                    </div>
-                  ))}
+                <div className="flex-1 h-24 bg-gray-400 rounded-lg flex items-center justify-center p-3">
+                  <span className="text-xs text-gray-700 font-semibold text-center leading-tight">Operational Data Sources</span>
                 </div>
+                <div className="flex-1 h-24 bg-gray-300 rounded-lg flex items-center justify-center p-3">
+                  <span className="text-xs text-gray-700 font-semibold text-center leading-tight">Specialized Data Repositories</span>
+                </div>
+              </div>
 
-                {/* Arrow and Database */}
-                <div className="flex flex-col items-center justify-center gap-2">
-                  <div className="text-xs text-gray-600 text-center">Unified<br/>by AI<br/>Fabric</div>
-                  <Database className="w-10 h-10 text-gray-800" />
+              {/* System boxes - equal width grid */}
+              <div className="grid grid-cols-4 gap-2 mb-3">
+                <div className="bg-brand-green text-white text-center py-4 rounded-lg font-bold text-sm">
+                  ERP
+                </div>
+                <div className="bg-brand-green text-white text-center py-4 rounded-lg font-bold text-sm">
+                  ITSM
+                </div>
+                <div className="bg-brand-green text-white text-center py-4 rounded-lg font-bold text-sm">
+                  HRIS / HCM
+                </div>
+                <div className="bg-brand-green text-white text-center py-4 rounded-lg font-bold text-sm">
+                  CRM
+                </div>
+              </div>
+
+              {/* Arrow pointing down to Unified by AI Fabric */}
+              <div className="flex flex-col items-center gap-2 mb-3">
+                <span className="text-yellow-500 text-2xl">↓</span>
+                <div className="flex items-center gap-3 bg-yellow-50 px-6 py-4 rounded-xl border border-yellow-200 w-full justify-center">
+                  <Database className="w-12 h-12 text-yellow-500" />
+                  <span className="text-base text-gray-700 font-bold">Unified by AI Fabric</span>
                 </div>
               </div>
 
               {/* Bullet points */}
-              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
+              <ul className="text-sm text-gray-700 space-y-2 pt-3 border-t border-gray-100 mt-3">
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Disconnected systems & data sources.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Manual, inefficient workflows.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Limited visibility & insights.</span>
                 </li>
               </ul>
@@ -110,12 +116,13 @@ const MindfulOperations: React.FC = () => {
           {/* Column 2: The Solution */}
           <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
-            <div className="bg-gradient-to-r from-teal-400 to-teal-500 p-4 text-center relative">
-              <div className="absolute top-3 right-3">
-                <Lightbulb className="w-6 h-6 text-white/70" />
+            <div className="bg-gradient-to-r from-brand-green to-teal-500 p-5 text-center relative">
+              <div className="flex justify-center mb-2">
+                <Lightbulb className="w-8 h-8 text-white/80" />
               </div>
-              <h3 className="text-white font-bold text-lg">The Solution: Unified AI</h3>
-              <p className="text-white font-bold text-lg">Operating Fabric</p>
+              <h3 className="text-white font-bold text-lg leading-tight">
+                The Solution: Unified AI<br/>Operating Fabric
+              </h3>
             </div>
 
             {/* Content */}
@@ -123,32 +130,33 @@ const MindfulOperations: React.FC = () => {
               {/* Grid of solution items */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {solutionItems.map((item, index) => (
-                  <div key={index} className="flex flex-col items-center gap-2">
-                    <div className="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center">
-                      <item.icon className="w-5 h-5 text-yellow-600" />
+                  <div key={index} className="flex flex-col items-center text-center gap-2">
+                    <div className="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center">
+                      <item.icon className="w-6 h-6 text-yellow-600" />
                     </div>
-                    <span className="text-xs text-gray-700 text-center font-medium">{item.label}</span>
+                    <span className="text-sm text-gray-700 font-semibold leading-tight">{item.label}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Arrow indicator */}
-              <div className="text-center text-brand-green font-semibold text-sm mb-4">
-                Enables<br/>Intelligent<br/>Operations →
+              {/* Enables text */}
+              <div className="flex items-center gap-3 bg-green-50 px-6 py-4 rounded-xl border border-green-200 w-full justify-center mb-4">
+                <Workflow className="w-10 h-10 text-brand-green" />
+                <span className="text-base text-brand-green font-bold">Enables Intelligent Operations</span>
               </div>
 
               {/* Bullet points */}
-              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
+              <ul className="text-sm text-gray-700 space-y-2 mt-auto">
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Integrates all data & functions.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Orchestrates intelligent workflows.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span>Provides governance & scalability.</span>
                 </li>
               </ul>
@@ -158,81 +166,85 @@ const MindfulOperations: React.FC = () => {
           {/* Column 3: The Outcome */}
           <div className="bg-white rounded-2xl border-2 border-brand-green overflow-hidden shadow-sm flex flex-col">
             {/* Header */}
-            <div className="bg-gradient-to-r from-brand-green to-teal-500 p-4 text-center relative">
-              <div className="absolute top-3 right-3">
-                <TrendingUp className="w-6 h-6 text-white/70" />
+            <div className="bg-gradient-to-r from-brand-green to-teal-500 p-5 text-center relative">
+              <div className="flex justify-center mb-2">
+                <TrendingUp className="w-8 h-8 text-white/80" />
               </div>
-              <h3 className="text-white font-bold text-lg">The Outcome: One Mindful and</h3>
-              <p className="text-white font-bold text-lg">Intelligent Enterprise Operations</p>
+              <h3 className="text-white font-bold text-lg leading-tight">
+                The Outcome: One Mindful and<br/>Intelligent Enterprise Operations
+              </h3>
             </div>
 
             {/* Content */}
-            <div className="p-6 flex-1 flex flex-col">
-              {/* Circular diagram */}
-              <div className="relative w-full h-48 mb-6">
+            <div className="p-6 flex-1 flex flex-col justify-between">
+              {/* Circular diagram - Two columns with center */}
+              <div className="flex items-center justify-between gap-4 flex-1">
+                {/* Left column */}
+                <div className="flex flex-col gap-6 items-center">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <Workflow className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">AI-Orchestrated<br/>Workflows</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <Users className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">Multi-Agent<br/>Collaboration</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <Eye className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">Real Time Clarity<br/>and Insight</span>
+                  </div>
+                </div>
+
                 {/* Center circle */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border-4 border-yellow-400 bg-gradient-to-br from-brand-green to-brand-darkGreen flex items-center justify-center">
-                  <div className="text-center text-white text-xs font-semibold leading-tight">
-                    Mindful<br/>and<br/>Intelligent<br/>Operations
+                <div className="flex items-center justify-center">
+                  <div className="w-28 h-28 rounded-full border-4 border-yellow-400 bg-gradient-to-br from-brand-green to-brand-darkGreen flex items-center justify-center shadow-lg">
+                    <div className="text-center text-white text-xs font-bold leading-tight">
+                      Mindful<br/>and<br/>Intelligent<br/>Operations
+                    </div>
                   </div>
                 </div>
 
-                {/* Surrounding items */}
-                <div className="absolute top-0 left-4 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <Workflow className="w-4 h-4 text-brand-green" />
+                {/* Right column */}
+                <div className="flex flex-col gap-6 items-center">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <Shield className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">Policy-Driven<br/>Autonomy</span>
                   </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">AI-Orchestrated Workflows</span>
-                </div>
-
-                <div className="absolute top-0 right-4 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <Shield className="w-4 h-4 text-brand-green" />
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <Users className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">Human-Looped<br/>Governance</span>
                   </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">Policy-Driven Autonomy</span>
-                </div>
-
-                <div className="absolute top-1/2 -translate-y-1/2 left-0 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <Users className="w-4 h-4 text-brand-green" />
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-brand-green flex items-center justify-center mb-2">
+                      <TrendingUp className="w-6 h-6 text-brand-green" />
+                    </div>
+                    <span className="text-xs text-gray-700 font-medium leading-tight">Continuous<br/>Improvement</span>
                   </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">Multi-Agent Collaboration</span>
-                </div>
-
-                <div className="absolute top-1/2 -translate-y-1/2 right-0 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <Users className="w-4 h-4 text-brand-green" />
-                  </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">Human-Looped Governance</span>
-                </div>
-
-                <div className="absolute bottom-0 left-4 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <Eye className="w-4 h-4 text-brand-green" />
-                  </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">Real Time Clarity and Insight</span>
-                </div>
-
-                <div className="absolute bottom-0 right-4 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mb-1">
-                    <TrendingUp className="w-4 h-4 text-brand-green" />
-                  </div>
-                  <span className="text-[10px] text-gray-600 text-center w-16">Continuous Improvement</span>
                 </div>
               </div>
 
               {/* Key definitions */}
-              <ul className="text-sm text-gray-700 space-y-1 mt-auto">
+              <ul className="text-sm text-gray-700 space-y-2 mt-6 pt-4 border-t border-gray-100">
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span><strong className="text-gray-900">Mindful:</strong> Ethical, trusted, high-quality data.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span><strong className="text-gray-900">Intelligent:</strong> Insight-driven, secure, KPI-linked.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400">•</span>
+                  <span className="text-gray-800 font-bold">•</span>
                   <span><strong className="text-gray-900">Business Value:</strong> Faster decisions, personalized experiences, generative design.</span>
                 </li>
               </ul>

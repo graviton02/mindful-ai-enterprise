@@ -1,13 +1,18 @@
-import { 
-  AlertTriangle, 
-  Database, 
-  ShieldAlert, 
-  Cpu, 
+import {
+  AlertTriangle,
+  Database,
+  ShieldAlert,
+  Cpu,
   Users,
   BrainCircuit,
   Search,
   Bot,
-  Network
+  Network,
+  Compass,
+  Server,
+  ShieldCheck,
+  Rocket,
+  RefreshCw
 } from 'lucide-react';
 import { Challenge, JourneyStep, Offering, VisionPoint } from './types';
 
@@ -60,37 +65,43 @@ export const JOURNEY_STEPS: JourneyStep[] = [
     id: 1,
     title: "AI Discovery & Future-State Blueprinting",
     subtitle: "We establish strategic clarity before any build begins.",
-    description: "This includes enterprise AI readiness assessment, high-value use-case discovery, ROI modeling, risk evaluation, and the creation of a unified, business-aligned AI transformation roadmap."
+    description: "This includes enterprise AI readiness assessment, high-value use-case discovery, ROI modeling, risk evaluation, and the creation of a unified, business-aligned AI transformation roadmap.",
+    icon: Compass
   },
   {
     id: 2,
     title: "Trusted Data Foundations",
     subtitle: "AI is only as reliable as the data beneath it.",
-    description: "We enable data profiling, cleansing, metadata enrichment, lineage management, privacy guardrails, and secure Retrieval-Augmented Generation (RAG) readiness to ensure trustworthy intelligence at scale."
+    description: "We enable data profiling, cleansing, metadata enrichment, lineage management, privacy guardrails, and secure Retrieval-Augmented Generation (RAG) readiness to ensure trustworthy intelligence at scale.",
+    icon: Database
   },
   {
     id: 3,
     title: "Unified Intelligence Infrastructure",
     subtitle: "We engineer the digital backbone for scalable AI.",
-    description: "This includes vector databases, data lakes, real-time event pipelines, API abstraction layers, orchestration fabrics, and secure multi-cloud deployment architectures."
+    description: "This includes vector databases, data lakes, real-time event pipelines, API abstraction layers, orchestration fabrics, and secure multi-cloud deployment architectures.",
+    icon: Server
   },
   {
     id: 4,
     title: "Secure & Outcome-Engineered AI Systems",
     subtitle: "We move beyond experiments to production-grade intelligence.",
-    description: "This includes predictive intelligence systems, RAG-enabled copilots, and multi-agent autonomous workflows—built with enterprise security, reliability, and compliance guardrails."
+    description: "This includes predictive intelligence systems, RAG-enabled copilots, and multi-agent autonomous workflows—built with enterprise security, reliability, and compliance guardrails.",
+    icon: ShieldCheck
   },
   {
     id: 5,
     title: "Enterprise Adoption & Value Realization",
     subtitle: "AI value is only realized when it is adopted at scale.",
-    description: "We enable KPI-driven performance dashboards, structured change management programs, AI governance councils, and adoption telemetry to ensure sustained enterprise impact."
+    description: "We enable KPI-driven performance dashboards, structured change management programs, AI governance councils, and adoption telemetry to ensure sustained enterprise impact.",
+    icon: Rocket
   },
   {
     id: 6,
     title: "Continuous Optimization & Governance",
     subtitle: "Ensuring trustworthy AI behavior throughout the lifecycle.",
-    description: "Continuous optimization and governance operate across all five stages—ensuring drift detection, performance monitoring, cost governance, security oversight, and trustworthy AI behavior throughout the lifecycle."
+    description: "Continuous optimization and governance operate across all five stages—ensuring drift detection, performance monitoring, cost governance, security oversight, and trustworthy AI behavior throughout the lifecycle.",
+    icon: RefreshCw
   }
 ];
 
